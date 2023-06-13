@@ -1,7 +1,5 @@
 # Data analysis of [Covid data](https://ourworldindata.org/covid-deaths)
 
-# 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
-
 ## Guide through the project
 - [Description](#description) 
 - [Features](#features)
