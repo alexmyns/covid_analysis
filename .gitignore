@@ -1,6 +1,6 @@
-.idea
+/.idea
 
-prefix_*
+/__pycache__
 
 /myenv
 
