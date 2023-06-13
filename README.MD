@@ -1,30 +1,26 @@
 # Data analysis of [Covid data](https://ourworldindata.org/covid-deaths)
 
 ## Guide through the project
-- [Description](#description) 
+- [Description](#description)
 - [Features](#features)
 - [Dataset](#dataset)
 - [Architecture](#architecture)
 - [How To Use](#how-to-use)
-- [License](#license)
-- [Credits](#credits)
 - [Get in touch](#get-in-touch)
 
 ## Description
 * COVID-19 Deaths Worldwide:
 This dataset provides comprehensive information on COVID-19 deaths worldwide, presenting a detailed analysis of the number of deaths attributed to the virus across different countries and time periods.
 * By offering data on COVID-19 deaths across multiple countries, this dataset facilitates a comparative analysis of mortality rates, enabling researchers to investigate disparities, evaluate healthcare systems' responses, and identify potential factors influencing outcomes.
-*This dataset provides a longitudinal perspective on COVID-19 deaths, enabling the examination of changes and developments in mortality rates over time. It allows researchers to track the progression of the pandemic and evaluate the effectiveness of mitigation strategies.
-*With a country-level breakdown and temporal information, this dataset presents a comprehensive analysis of COVID-19 deaths, allowing for the exploration of patterns, trends, and variations in fatality rates across different nations over time.
-*This dataset offers a comprehensive view of COVID-19 mortality rates worldwide, encompassing data on the number of deaths resulting from the virus and providing insights into the global impact of the pandemic.
 
 ## Features
-- ⚡Python for EDA, data exploration
-- ⚡SQL for data storage, SQLAlchemy is also used
-- ⚡PowerBI Desktop
-- ⚡PowerQuery Editor [For data-transformation/data-modeling]  
-- ⚡PowerBI Service [For making the report accessible on the web without PowerBI login]  
-- ⚡Multipage fully Interactive Report [For drawing insights and analysis] 
+- ⚡Data was scraped from the online web service with <b>BeautifulSoup4</b>
+- ⚡<b>Python</b> for EDA, data exploration
+- ⚡<b>SQLite</b> for data storage
+- ⚡<b>Streamlit</b> for deploying and making cool website (with python)
+- ⚡<b>Docker</b> is also used to creating images over the project 
+- ⚡<b>PowerBI Desktop</b> for data visualisation (PowerQuery Editor [For data-transformation/data-modeling])
+- ⚡Multipage fully Interactive Report [For drawing insights and analysis]  
 
 ## Architecture
 
@@ -49,3 +45,20 @@ This dataset provides comprehensive information on COVID-19 deaths worldwide, pr
 7. Scalability and Performance Considerations:
    To ensure scalability and performance, the SQL database is designed with appropriate indexes and optimized query structures. Batch processing techniques can be implemented in Python to handle large datasets efficiently. Additionally, Power BI's performance optimization features, such as query folding and data modeling optimizations, can be utilized for faster data retrieval and visualization.
 
+# How to use
+1. `pip install -r requirements.txt` -  In this command, requirements.txt is the name of the file that contains a list of Python packages and their versions, each on a separate line. The -r flag tells pip to install the packages specified in the requirements file.
+
+2. `streamlit run Home.py` - to run the local working website built on streamlit
+
+3. Build the <b>Docker</b> Docker image: Open a terminal or command prompt, navigate to the directory containing the Dockerfile, and run the following command to build the Docker image: 
+`docker build -t myapp .` 
+This command builds a Docker image with the tag myapp. The . indicates that the Dockerfile is in the current directory.
+
+4. Run the Docker container: After the image is built, you can run a Docker container based on that image. Use the following command: 
+`docker run -p 8501:8501 --name mycontainer myapp`
+This command creates and starts a container named mycontainer based on the myapp image. The -p 8501:8501 flag maps port 8501 from the container to port 8501 on the host, allowing you to access the Streamlit app in your browser at http://localhost:8501. If you need to specify a different port, adjust the port numbers accordingly in both the Dockerfile and the docker run command.
+
+### Get in touch
+| Email | Telegram |
+|  ---    |    ----    |  
+| alixan.me@yandex.com | t.me//alexmyns |
